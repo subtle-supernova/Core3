@@ -15,10 +15,15 @@ These are for bare metal Debian 8.7 and they're pretty rough.
 - move the `MMOEngine` dir into the `Core3` dir
 - install build-essential clang openjdk-8-jdk mysql-server lua5.3 liblua5.3-dev liblua5.1-dev libmysqld-dev lipssl-dev
   - at the time of this writing, you need jessie-backports to install openjdk8
+  - add jessie-backports by editing `/etc/apt/sources.list` and adding the line `deb http://ftp.de.debian.org/debian jessie-backports main`
+  - and run `apt install -t jessie-backports openjdk-8-jre-headless ca-certificates-java` to install openjdk-8
 - you need a few flags set in your `~/.bashrc`
 - `make config`
-- edit `unix/build/src/Makefile` and where it adds `-llua` you'll need to link to lua5.1, 5.2, and 5.3
-  - To do this, move `liblua5.1.so` to `/usr/local/lib`
+- symlink `liblua` like so: 
+  - `liblua5.1.so -> /usr/lib/x86_64-linux-gnu/liblua5.1.so`
+  - `liblua5.2.so.0 -> liblua.so`
+  - `liblua5.3.so -> /usr/lib/x86_64-linux-gnu/liblua5.3.so.0`
+  - `liblua.so -> /usr/lib/x86_64-linux-gnu/liblua5.2.so.0.0.0`
 - make sure the environment variables below are set in `$HOME/.bashrc`
 - move all lua 5.2 header files to `/usr/local/include/`
 
