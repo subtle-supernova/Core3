@@ -22,12 +22,6 @@ ConfigManager::ConfigManager() {
 	dBPass = "Gemeni1";
 	dBSecret = "swgemusecret";
 
-	mantisHost = "127.0.0.1";
-	mantisPort = 3306;
-	mantisName = "swgemu";
-	mantisUser = "root";
-	mantisPass = "Gemeni1";
-
 	progressMonitors = true;
 
 	statusPort = 44455;
@@ -84,13 +78,6 @@ bool ConfigManager::loadConfigData() {
 	dBUser = getGlobalString("DBUser");
 	dBPass = getGlobalString("DBPass");
 	dBSecret = getGlobalString("DBSecret");
-
-	mantisHost = getGlobalString("MantisHost");
-	mantisPort = getGlobalShort("MantisPort");
-	mantisName = getGlobalString("MantisName");
-	mantisUser = getGlobalString("MantisUser");
-	mantisPass = getGlobalString("MantisPass");
-	mantisPrfx = getGlobalString("MantisPrfx");
 
 	trePath = getGlobalString("TrePath");
 	loadTreFileList();

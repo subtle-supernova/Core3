@@ -26,13 +26,6 @@ namespace conf {
 		String dBPass;
 		String dBSecret;
 
-		String mantisHost;
-		uint16 mantisPort;
-		String mantisName;
-		String mantisUser;
-		String mantisPass;
-		String mantisPrfx;
-
 		String trePath;
 
 		uint16 statusPort;
@@ -147,34 +140,6 @@ namespace conf {
 
 		inline String& getDBSecret() {
 			return dBSecret;
-		}
-
-		inline String& getMantisHost() {
-			return mantisHost;
-		}
-
-		inline uint16& getMantisPort() {
-			return mantisPort;
-		}
-
-		inline Vector<String>& getTreFiles() {
-			return treFiles;
-		}
-
-		inline String& getMantisName() {
-			return mantisName;
-		}
-
-		inline String& getMantisUser() {
-			return mantisUser;
-		}
-
-		inline String& getMantisPass() {
-			return mantisPass;
-		}
-
-		inline String& getMantisPrefix() {
-			return mantisPrfx;
 		}
 
 		inline String& getMessageOfTheDay() {

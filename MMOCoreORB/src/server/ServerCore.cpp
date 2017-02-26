@@ -5,7 +5,6 @@
 #include "ServerCore.h"
 
 #include "db/ServerDatabase.h"
-#include "db/MantisDatabase.h"
 
 #include "server/chat/ChatManager.h"
 #include "server/login/LoginServer.h"
@@ -38,7 +37,6 @@ ServerCore::ServerCore(bool truncateDatabases, SortedVector<String>& args) :
 	pingServer = NULL;
 	webServer = NULL;
 	database = NULL;
-	mantisDatabase = NULL;
 
 	truncateAllData = truncateDatabases;
 	arguments = args;
@@ -82,8 +80,6 @@ void ServerCore::initialize() {
 		ObjectManager* objectManager = ObjectManager::instance();
 
 		database = new ServerDatabase(configManager);
-
-		mantisDatabase = new MantisDatabase(configManager);
 
 		String& orbaddr = configManager->getORBNamingDirectoryAddress();
 		orb = DistributedObjectBroker::initialize(orbaddr,
@@ -304,11 +300,6 @@ void ServerCore::shutdown() {
 	if (database != NULL) {
 		delete database;
 		database = NULL;
-	}
-
-	if (mantisDatabase != NULL) {
-		delete mantisDatabase;
-		mantisDatabase = NULL;
 	}
 
 	if (features != NULL) {

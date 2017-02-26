@@ -63,13 +63,6 @@ LoginProcessingThreads = 1
 LoginAllowedConnections = 3000
 LoginRequiredVersion = "20050408-18:00"
 
-MantisHost = "127.0.0.1"
-MantisPort = 3306
-MantisName = "swgemu"
-MantisUser = "swgemu"
-MantisPass = "123456"
-MantisPrfx = "mantis_" -- The prefix for your mantis tables.
-
 AutoReg = 1
 
 ProgressMonitors = "true"

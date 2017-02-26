@@ -530,7 +530,6 @@ core3_SOURCES =	$(core3_IDLS) \
 		conf/ConfigManager.cpp \
 		server/features/Features.cpp \
 		server/db/ServerDatabase.cpp \
-		server/db/MantisDatabase.cpp \
 		server/login/LoginProcessServerImplementation.cpp \
 		server/login/LoginPacketHandler.cpp \
 		server/login/LoginServerImplementation.cpp \

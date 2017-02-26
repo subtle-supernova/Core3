@@ -1,13 +1,13 @@
 /*
- * MantisDatabase.cpp
+ * Database.cpp
  *
  *  Created on: Nov 22, 2010
  *      Author: crush
  */
 
 
-#include "MantisDatabase.h"
+#include "Database.h"
 
-Vector<Database*>* MantisDatabase::databases = NULL;
-AtomicInteger MantisDatabase::currentDB;
-String MantisDatabase::tablePrefix;
+Vector<Database*>* Database::databases = NULL;
+AtomicInteger Database::currentDB;
+String Database::tablePrefix;

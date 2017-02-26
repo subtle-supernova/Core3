@@ -24,7 +24,6 @@ namespace conf {
 using namespace conf;
 
 class ServerDatabase;
-class MantisDatabase;
 class StatusServer;
 class Features;
 class PingServer;
@@ -41,8 +40,6 @@ class ServerCore : public Core, public Logger {
 	ConfigManager* configManager;
 
 	ServerDatabase* database;
-
-	MantisDatabase* mantisDatabase;
 
 	DistributedObjectBroker* orb;
 

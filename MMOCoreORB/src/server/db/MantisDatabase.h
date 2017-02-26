@@ -1,35 +1,35 @@
 /*
- * MantisDatabase.h
+ * Database.h
  *
  *  Created on: Nov 22, 2010
  *      Author: crush
  */
 
-#ifndef MANTISDATABASE_H_
-#define MANTISDATABASE_H_
+#ifndef DATABASE_H_
+#define DATABASE_H_
 
 #include "../conf/ConfigManager.h"
 
-class MantisDatabase {
+class Database {
 	static Vector<Database*>* databases;
 	static AtomicInteger currentDB;
 
 	static String tablePrefix;
 
 public:
-	MantisDatabase(ConfigManager* configManager) {
-		String& dbHost = configManager->getMantisHost();
-        String& dbUser = configManager->getMantisUser();
-        String& dbPass = configManager->getMantisPass();
-        String& dbName = configManager->getMantisName();
-        tablePrefix = configManager->getMantisPrefix();
-        uint16& dbPort = configManager->getMantisPort();
+	Database(ConfigManager* configManager) {
+		String& dbHost = configManager->getHost();
+        String& dbUser = configManager->getUser();
+        String& dbPass = configManager->getPass();
+        String& dbName = configManager->getName();
+        tablePrefix = configManager->getPrefix();
+        uint16& dbPort = configManager->getPort();
 
         databases = new Vector<Database*>();
 
         for (int i = 0; i < DEFAULT_SERVERDATABASE_INSTANCES; ++i) {
         	try {
-        		Database* db = new engine::db::mysql::MySqlDatabase(String("MantisDatabase" + String::valueOf(i)), dbHost);
+        		Database* db = new engine::db::mysql::MySqlDatabase(String("Database" + String::valueOf(i)), dbHost);
         		db->connect(dbName, dbUser, dbPass, dbPort);
 
         		databases->add(db);
@@ -42,7 +42,7 @@ public:
 
 	const static int DEFAULT_SERVERDATABASE_INSTANCES = 1;
 
-	~MantisDatabase() {
+	~Database() {
 		while (!databases->isEmpty()) {
 			Database* db = databases->remove(0);
 
@@ -69,4 +69,4 @@ public:
 	}
 };
 
-#endif /* MANTISDATABASE_H_ */
+#endif /* DATABASE_H_ */
