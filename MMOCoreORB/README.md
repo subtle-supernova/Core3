@@ -19,4 +19,17 @@ These are for bare metal Debian 8.7 and they're pretty rough.
 - `make config`
 - edit `unix/build/src/Makefile` and where it adds `-llua` you'll need to link to lua5.1, 5.2, and 5.3
   - To do this, move `liblua5.1.so` to `/usr/local/lib`
+- make sure the environment variables below are set in `$HOME/.bashrc`
 - move all lua 5.2 header files to `/usr/local/include/`
+
+
+Env vars:
+```bash
+export CC=clang
+export CXX=clang++
+export CPPFLAGS="-w -g -lstdc++ -DGTEST_USE_OWN_TR1_TUPLE=1 -I/usr/local/include"
+export CXXFLAGS="-lstdc++ -stdlib=libstdc++"
+export CLASSPATH="$HOME/PublicEngine/MMOEngine/bin/idlc.jar"
+
+export PATH=$PATH:$HOME/PublicEngine/MMOEngine/bin
+```
