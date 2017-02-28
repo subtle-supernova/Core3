@@ -45,7 +45,7 @@ shuttleportAwayTime = 150
 starportAwayTime = 30
 
 --Time, in seconds, that a shuttle takes to land
-shuttleportLandingTime = 5
+shuttleportLandingTime = 11
 starportLandingTime = 7
 
 --Time, in seconds, that a shuttle is landed for
