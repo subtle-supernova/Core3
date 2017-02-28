@@ -725,56 +725,56 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					},
 					"Master", "social_imagedesigner_master"
 				},
-				"Jedi",
-				{
-					"Rank",
-					{
-					"Jedi Dark Rank",
-					{
-						"Rank Member", "force_rank_dark_novice",
-						"Enforcer",
-						{
-							"Enforcer I", "force_rank_dark_rank_01",
-							"Enforcer II", "force_rank_dark_rank_02",
-							"Enforcer III", "force_rank_dark_rank_03",
-							"Enforcer IV", "force_rank_dark_rank_04"
-						},
-						"Templar",
-						{
-							"Templar I", "force_rank_dark_rank_05",
-							"Templar II", "force_rank_dark_rank_06",
-							"Templar III", "force_rank_dark_rank_07"
-						},
-						"Oppressor",
-						{
-							"Oppressor I", "force_rank_dark_rank_08",
-							"Oppressor II", "force_rank_dark_rank_09"
-						},
-					},
-					
-					"Jedi Light Rank",
-					{
-						"Rank Member", "force_rank_dark_novice",
-						"Sentinel",
-						{
-							"Sentinel I", "force_rank_light_rank_01",
-							"Sentinel II", "force_rank_light_rank_02",
-							"Sentinel III", "force_rank_light_rank_03",
-							"Sentinel IV", "force_rank_light_rank_04"
-						},
-						"Consular",
-						{
-							"Consular I", "force_rank_light_rank_05",
-							"Consular II", "force_rank_light_rank_06",
-							"Consular III", "force_rank_light_rank_07"
-						},
-						"Arbiter",
-						{
-							"Arbiter I", "force_rank_light_rank_08",
-							"Arbiter II", "force_rank_light_rank_09"
-						},
-					},
-					},
+				--"Jedi",
+				--{
+				--	"Rank",
+				--	{
+				--	"Jedi Dark Rank",
+				--	{
+				--		"Rank Member", "force_rank_dark_novice",
+				--		"Enforcer",
+				--		{
+				--			"Enforcer I", "force_rank_dark_rank_01",
+				--			"Enforcer II", "force_rank_dark_rank_02",
+				--			"Enforcer III", "force_rank_dark_rank_03",
+				--			"Enforcer IV", "force_rank_dark_rank_04"
+				--		},
+				--		"Templar",
+				--		{
+				--			"Templar I", "force_rank_dark_rank_05",
+				--			"Templar II", "force_rank_dark_rank_06",
+				--			"Templar III", "force_rank_dark_rank_07"
+				--		},
+				--		"Oppressor",
+				--		{
+				--			"Oppressor I", "force_rank_dark_rank_08",
+				--			"Oppressor II", "force_rank_dark_rank_09"
+				--		},
+				--	},
+				--	
+				--	"Jedi Light Rank",
+				--	{
+				--		"Rank Member", "force_rank_dark_novice",
+				--		"Sentinel",
+				--		{
+				--			"Sentinel I", "force_rank_light_rank_01",
+				--			"Sentinel II", "force_rank_light_rank_02",
+				--			"Sentinel III", "force_rank_light_rank_03",
+				--			"Sentinel IV", "force_rank_light_rank_04"
+				--		},
+				--		"Consular",
+				--		{
+				--			"Consular I", "force_rank_light_rank_05",
+				--			"Consular II", "force_rank_light_rank_06",
+				--			"Consular III", "force_rank_light_rank_07"
+				--		},
+				--		"Arbiter",
+				--		{
+				--			"Arbiter I", "force_rank_light_rank_08",
+				--			"Arbiter II", "force_rank_light_rank_09"
+				--		},
+				--	},
+				--	},
 					"Light Saber",
 				{
 					"Novice", "force_discipline_light_saber_novice",
